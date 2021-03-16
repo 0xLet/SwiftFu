@@ -12,7 +12,7 @@ public extension Printable {
         Swift.print(self)
     }
     
-    func print(_ closure: (Self) -> String) {
-        Swift.print(closure(self))
+    func print(modifiedString: (Self) -> String) {
+        Swift.print(modifiedString(self))
     }
 }
