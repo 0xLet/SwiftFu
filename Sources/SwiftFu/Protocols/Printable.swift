@@ -8,11 +8,11 @@
 public protocol Printable { }
 
 public extension Printable {
-    func print() {
-        Swift.print(self)
+    func sout() {
+        print(self)
     }
     
-    func print(modifiedString: (Self) -> String) {
-        Swift.print(modifiedString(self))
+    func sout(modifiedString: (Self) -> String) {
+        print(modifiedString(self))
     }
 }
