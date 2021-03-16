@@ -5,9 +5,9 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Functionable { }
+public protocol Functionable { }
 
-extension Functionable {
+public extension Functionable {
     @inlinable
     func `func`(closure: (Self) -> Void) {
         closure(self)

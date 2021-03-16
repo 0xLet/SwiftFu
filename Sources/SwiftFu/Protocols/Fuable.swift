@@ -5,12 +5,12 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Fuable: Printable, Modifiable,
+public protocol Fuable: Printable, Modifiable,
                  Boolable, Functionable,
                  Tuplable, Assertable { }
-protocol FuableClass: Fuable, Configurable { }
+public protocol FuableClass: Fuable, Configurable { }
 
-extension Optional {
+public extension Optional {
     func replace(nilWith value: Wrapped) -> Wrapped {
         guard let self = self else {
             return value

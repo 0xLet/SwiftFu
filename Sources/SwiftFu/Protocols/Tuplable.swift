@@ -5,9 +5,9 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Tuplable { }
+public protocol Tuplable { }
 
-extension Tuplable {
+public extension Tuplable {
     func tuple<Value>(appending value: Value) -> (Self, Value) {
         (self, value)
     }

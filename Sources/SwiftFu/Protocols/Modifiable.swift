@@ -5,9 +5,9 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Modifiable { }
+public protocol Modifiable { }
 
-extension Modifiable {
+public extension Modifiable {
     @inlinable
     func modify(modification: (inout Self) -> Void) -> Self {
         var copy = self

@@ -5,9 +5,9 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Assertable { }
+public protocol Assertable { }
 
-extension Assertable {
+public extension Assertable {
     @inlinable
     func assert(
         message: String? = nil,

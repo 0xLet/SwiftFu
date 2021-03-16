@@ -5,9 +5,9 @@
 //  Created by Leif on 3/15/21.
 //
 
-protocol Printable { }
+public protocol Printable { }
 
-extension Printable {
+public extension Printable {
     func print() {
         Swift.print(self)
     }
