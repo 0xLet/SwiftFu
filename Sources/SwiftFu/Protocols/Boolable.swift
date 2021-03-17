@@ -8,7 +8,6 @@
 public protocol Boolable { }
 
 public extension Boolable {
-    @inlinable
     func bool(statement: (Self) -> Bool) -> Bool {
         let result = statement(self)
         

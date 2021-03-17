@@ -8,7 +8,6 @@
 public protocol Assertable { }
 
 public extension Assertable {
-    @inlinable
     func assert(
         message: String? = nil,
         statement: (Self) -> Bool
@@ -21,7 +20,6 @@ public extension Assertable {
         return self
     }
     
-    @inlinable
     func precondition(
         message: String? = nil,
         statement: (Self) -> Bool

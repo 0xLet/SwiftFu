@@ -8,7 +8,6 @@
 public protocol Modifiable { }
 
 public extension Modifiable {
-    @inlinable
     func modify(modification: (inout Self) -> Void) -> Self {
         var copy = self
         

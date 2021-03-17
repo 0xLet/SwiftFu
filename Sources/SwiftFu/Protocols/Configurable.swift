@@ -9,7 +9,6 @@ public protocol Configurable: class { }
 
 public extension Configurable {
     @discardableResult
-    @inlinable
     func configure(configuration: (Self) -> Void) -> Self {
         configuration(self)
         
