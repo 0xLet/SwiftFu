@@ -83,7 +83,7 @@ public func switchmap<T: Hashable, O>(
 }
 
 /**
- # switcheach
+ # switcheffect
  
  This function allows you to use a `switch` in one line. As this isn't using an actual `switch`, you do not need to supply all the cases of the value.
  
@@ -92,7 +92,7 @@ public func switchmap<T: Hashable, O>(
      - cases: Cases to determine code paths
      - default: Default Case if none of the `cases` succeed
  */
-public func switcheach<T: Hashable>(
+public func switcheffect<T: Hashable>(
     value: T,
     cases: [T: () -> Void],
     defaultCase: @escaping () -> Void = {}
@@ -127,9 +127,9 @@ public extension Collection where Element: Hashable {
     }
     
     /**
-     switcheach
+     switcheffect
      
-     Loop over the Collection and `switcheach` each value.
+     Loop over the Collection and `switcheffect` each value.
      
      - Parameters:
          - cases: Cases to determine code paths
@@ -140,9 +140,9 @@ public extension Collection where Element: Hashable {
         defaultCase: @escaping () -> Void = {}
     ) {
         forEach {
-            SwiftFu.switcheach(value: $0,
-                               cases: cases,
-                               defaultCase: defaultCase)
+            SwiftFu.switcheffect(value: $0,
+                                 cases: cases,
+                                 defaultCase: defaultCase)
         }
     }
 }
