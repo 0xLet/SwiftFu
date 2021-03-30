@@ -26,14 +26,14 @@ final class SwitchTests: XCTestCase {
         XCTAssertEqual(switchedValue, true)
     }
     
-    func test_switcheach() {
+    func test_switcheffect() {
         enum Example {
             case a, b, c, d
         }
         
         let value: Example = .c
         
-        switcheach(
+        switcheffect(
             value: value,
             cases: [
                 .a: {
@@ -65,11 +65,11 @@ final class SwitchTests: XCTestCase {
         XCTAssertEqual(switchedList, ["one", "two", "three"])
     }
     
-    func test_switcheachArray() {
+    func test_switcheffectArray() {
         let list = [1, 2, 3]
         var count = 0
         
-        list.switcheach(
+        list.switcheffect(
             cases: [
                 0: { count += 10 },
                 1: { count += 20 },
@@ -100,10 +100,10 @@ final class SwitchTests: XCTestCase {
     
     
     static var allTests = [
-        ("test_switchin", test_switchmap),
-        ("test_switchinClosure", test_switcheach),
-        ("test_switchinArray", test_switchmapArray),
-        ("test_switcheachArray", test_switcheachArray),
-        ("test_switchinString", test_switchmapString)
+        ("test_switchmap", test_switchmap),
+        ("test_switcheffect", test_switcheffect),
+        ("test_switchmapArray", test_switchmapArray),
+        ("test_switcheffectArray", test_switcheffectArray),
+        ("test_switchmapString", test_switchmapString)
     ]
 }

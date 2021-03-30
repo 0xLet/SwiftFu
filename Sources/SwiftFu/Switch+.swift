@@ -135,7 +135,7 @@ public extension Collection where Element: Hashable {
          - cases: Cases to determine code paths
          - default: Default Case if none of the `cases` succeed
      */
-    func switcheach(
+    func switcheffect(
         cases: [Element: () -> Void],
         defaultCase: @escaping () -> Void = {}
     ) {
