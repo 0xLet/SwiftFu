@@ -101,7 +101,17 @@ final class SwiftFuTests: XCTestCase {
             }
     }
     
-    static var allTests = [
-        ("testClassConfigure", testClassConfigure),
-    ]
+    func testMath() {
+        let int = 5
+            .subtract(100)
+            .add(5)
+            .power(3)
+        
+        let float = Float.pi.multiply(2)
+        let double = Double.pi.multiply(2)
+        
+        XCTAssertEqual(int, Int(pow(Double((5 - 100) + 5), Double(3))))
+        XCTAssertEqual(float, Float.pi * 2)
+        XCTAssertEqual(double, Double.pi * 2)
+    }
 }
