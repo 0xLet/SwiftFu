@@ -5,7 +5,7 @@
 //  Created by Leif on 3/15/21.
 //
 
-public protocol Configurable: class { }
+public protocol Configurable: AnyObject { }
 
 public extension Configurable {
     @discardableResult
