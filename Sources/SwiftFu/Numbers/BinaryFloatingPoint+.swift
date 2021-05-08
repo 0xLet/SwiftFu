@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension BinaryFloatingPoint {
+public extension BinaryFloatingPoint {
     func add(_ number: Self) -> Self {
         self + number
     }

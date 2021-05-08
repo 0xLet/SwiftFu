@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension BinaryInteger {
+public extension BinaryInteger {
     func add(_ number: Self) -> Self {
         self + number
     }
